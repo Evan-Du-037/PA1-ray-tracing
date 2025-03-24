@@ -8,7 +8,7 @@
 #include "hit.hpp"
 #include <iostream>
 
-// TODO: Implement Shade function that computes Phong introduced in class.
+// Implement Shade function that computes Phong introduced in class.
 class Material {
 public:
 
@@ -23,15 +23,23 @@ public:
         return diffuseColor;
     }
 
-
     Vector3f Shade(const Ray &ray, const Hit &hit,
-                   const Vector3f &dirToLight, const Vector3f &lightColor) {
-        // Vector3f shaded = Vector3f::ZERO;
-        Vector3f L = -ray.getDirection() + dirToLight;
-        L = L / L.length();
-        Vector3f specularShade = specularColor * lightColor * pow(std::max(0.0f, Vector3f::dot(L, hit.getNormal())), shininess);
-        Vector3f diffuseShade = diffuseColor * lightColor * std::max(0.0f, Vector3f::dot(-ray.getDirection(), hit.getNormal()));
-        Vector3f shaded = specularColor + diffuseShade;
+                const Vector3f &dirToLight, const Vector3f &lightColor) {
+        Vector3f N = hit.getNormal().normalized();
+        Vector3f L = dirToLight.normalized();
+        Vector3f V = -ray.getDirection().normalized();
+        Vector3f H = (L + V).normalized();
+
+        // diffuse shade
+        float diffuseFactor = std::max(0.0f, Vector3f::dot(N, L));
+        Vector3f diffuseShade = diffuseColor * lightColor * diffuseFactor;
+
+        // specular shade
+        float specFactor = std::max(0.0f, Vector3f::dot(N, H));
+        Vector3f specularShade = specularColor * lightColor * pow(specFactor, shininess);
+
+        // ambient color neglected
+        Vector3f shaded = diffuseShade + specularShade;
         return shaded;
     }
 

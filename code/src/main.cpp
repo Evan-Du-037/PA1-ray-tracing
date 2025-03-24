@@ -33,7 +33,33 @@ int main(int argc, char *argv[]) {
     // through that pixel and finding its intersection with
     // the scene.  Write the color at the intersection to that
     // pixel in your output image.
-    
+    SceneParser sceneParser(argv[1]);
+    Camera* camera = sceneParser.getCamera();
+
+    Image renderedImg(camera->getWidth(), camera->getHeight());
+
+    for(int x = 0; x < camera->getWidth(); ++x) {
+        for(int y = 0; y < camera->getHeight(); ++y) {
+            Ray camRay = camera->generateRay(Vector2f(x, y));
+            Group* baseGroup = sceneParser.getGroup();
+            Hit hit;
+            bool isIntersect = baseGroup->intersect(camRay, hit, 0);
+            if(isIntersect) {
+                Vector3f finalColor = Vector3f::ZERO;
+                for(int li = 0; li < sceneParser.getNumLights(); ++li) {
+                    Light* light = sceneParser.getLight(li);
+                    Vector3f L, lightColor;
+                    light->getIllumination(camRay.pointAtParameter(hit.getT()), L, lightColor);
+                    finalColor += hit.getMaterial()->Shade(camRay, hit, L, lightColor);
+                }
+                renderedImg.SetPixel(x, y, finalColor);
+            } else {
+                renderedImg.SetPixel(x, y, sceneParser.getBackgroundColor());
+            }
+        }
+    }
+    renderedImg.SaveImage(argv[2]);
+
     return 0;
 }
 
