@@ -36,38 +36,6 @@ protected:
     int height;
 };
 
-// TODO: Implement Perspective camera
-// You can add new functions or variables whenever needed.
-
-// class PerspectiveCamera : public Camera {
-
-// public:
-//     PerspectiveCamera(const Vector3f &center, const Vector3f &direction,
-//             const Vector3f &up, int imgW, int imgH, float angle) : Camera(center, direction, up, imgW, imgH) {
-//         // angle is in radian.
-//         up_bias = 1;
-//         horizontal_bias = 1;
-//     }
-
-//     Ray generateRay(const Vector2f &point) override {
-//         float x = point[0];
-//         float y = point[1];
-//         float center_x = width / 2.0f;
-//         float center_y = height / 2.0f;
-//         float x_bias = x - center_x;
-//         float y_bias = y - center_y;
-//         Vector3f rayOrigin = center + up * y_bias + horizontal * x_bias;
-//         Vector3f rayDirection = direction;
-//         return Ray(rayOrigin, rayDirection);
-//     }
-// protected:
-
-//     float up_bias;
-//     float horizontal_bias;
-
-// };
-
-
 class PerspectiveCamera : public Camera {
 public:
     PerspectiveCamera(const Vector3f &center, const Vector3f &direction,
@@ -75,21 +43,13 @@ public:
         : Camera(center, direction, up, imgW, imgH), angle(angle) {}
 
     Ray generateRay(const Vector2f &point) override {
-        // 像素坐标 -> [-0.5, 0.5]
-        float normalized_x = (point.x() / width) - 0.5f;
-        float normalized_y = 0.5f - (point.y() / height); // y轴反向
+        float normalized_x = point.x() / width - 0.5f;
+        float normalized_y = point.y() / height - 0.5f;
 
-        // 宽高比调整
-        float aspect_ratio = float(width) / height;
-        normalized_x *= aspect_ratio;
+        float x_angle = angle / height * width * normalized_x;
+        float y_angle = angle * normalized_y;
 
-        // 焦距，根据视角计算
-        float image_plane_height = 2.0f * tan(angle / 2.0f);
-        float focal_length = 1.0f / tan(angle / 2.0f);  // 简洁起见：焦距设为 1，或随意放缩也可
-
-        // 图像平面上的点对应的方向
-        Vector3f ray_dir = (focal_length * direction + normalized_x * horizontal + normalized_y * up).normalized();
-        // Vector3f newCenter = center - (point.x() - width / 2) * horizontal - (point.y() - height / 2) * up;
+        Vector3f ray_dir = (direction + tan(x_angle) * horizontal + tan(y_angle) * up).normalized();
         return Ray(center, ray_dir);
     }
 

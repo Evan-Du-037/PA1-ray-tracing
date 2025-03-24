@@ -22,50 +22,22 @@ public:
 	}
 
 	bool intersect(const Ray& ray,  Hit& hit , float tmin) override {
-        float m = Vector3f::dot(ray.getDirection(), normal);
-		bool reverse = false;
-		if(m < 0) {
-			m = -m;
-			reverse = true;
-		}
-		if(m < eps) {
-            return false;
-        }
-        Vector3f point = vertices[0];
-        float t;
-        t = Vector3f::dot(point - ray.getOrigin(), normal) / Vector3f::dot(normal, ray.getDirection());
-		assert(t >= 0);
-        if(t < tmin) {
+		assert(tmin > 0);
+		Matrix3f matrix = Matrix3f(vertices[0]-vertices[1], vertices[0]-vertices[2], ray.getDirection());
+		if (fabs(matrix.determinant()) < 1e-6) return false;  // matrix irriversible
+		Vector3f result = matrix.inverse() * (vertices[0] - ray.getOrigin());
+		float x = result[0];
+		float y = result[1];
+		float t = result[2];
+		if(t < tmin || x > 1 || y > 1 || x < 0 || y < 0 || x+y > 1) {
 			return false;
 		}
-		Vector3f intersectPoint = ray.getOrigin() + t * ray.getDirection();
-		// Vector3f _a = vertices[0] - intersectPoint;
-		// Vector3f _b = vertices[1] - intersectPoint;
-		// Vector3f _c = vertices[2] - intersectPoint;
-		// float ab = Vector3f::dot(_a, _b);
-		// float ac = Vector3f::dot(_a, _c);
-		// float bc = Vector3f::dot(_c, _b);
-		// if(ab <= 0 && bc <= 0 && ac <= 0) {
-		// 	hit.set(t, material, reverse ? -normal : normal);
-		// 	return true;
-		// }
-		// return false;
-		
-		Vector3f v0 = vertices[1] - vertices[0];
-		Vector3f v1 = vertices[2] - vertices[1];
-		Vector3f v2 = vertices[0] - vertices[2];
-
-		Vector3f c0 = Vector3f::cross(v0, intersectPoint - vertices[0]);
-		Vector3f c1 = Vector3f::cross(v1, intersectPoint - vertices[1]);
-		Vector3f c2 = Vector3f::cross(v2, intersectPoint - vertices[2]);
-
-		if (Vector3f::dot(c0, normal) >= 0 &&
-			Vector3f::dot(c1, normal) >= 0 &&
-			Vector3f::dot(c2, normal) >= 0) {
-			hit.set(t, material, reverse ? -normal : normal);
-			return true;
+		Vector3f planeNormal = normal;
+		if(Vector3f::dot(planeNormal, ray.getOrigin()-vertices[0]) < 0) {
+			planeNormal = -planeNormal;
 		}
-		return false;
+		hit.set(t, material, planeNormal);
+		return true;
 	}
 
 	Vector3f normal;

@@ -21,16 +21,20 @@ public:
     ~Plane() override = default;
 
     bool intersect(const Ray &r, Hit &h, float tmin) override {
-        Vector3f P = normal * d;
+        assert(tmin >= 0);
+		// find the intersection point with the plane first
+        Vector3f P = d * normal;
         Vector3f planeNormal = normal;
         Vector3f OP = P - r.getOrigin();
-        if(Vector3f::dot(OP, planeNormal) > 0) {
+		float numerator = Vector3f::dot(OP, planeNormal);
+        if(numerator > 0) {
             planeNormal = -planeNormal;
+			numerator = -numerator;
         }
         
-        float m = Vector3f::dot(planeNormal, r.getDirection().normalized());
-        if(abs(m) < eps) return false;  // parallel
-        float t = Vector3f::dot(OP, planeNormal) / m;
+        float denominator = Vector3f::dot(planeNormal, r.getDirection());
+        if(abs(denominator) < eps) return false;  // parallel
+        float t = numerator / denominator;
         if(t >= tmin) {
             h.set(t, material, planeNormal);
             return true;
