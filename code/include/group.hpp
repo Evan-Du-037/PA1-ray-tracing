@@ -36,10 +36,8 @@ public:
 
     bool intersect(const Ray &r, Hit &h, float tmin) override {
         bool flag = false;
-        Hit tmpHit;
         for(Object3D* object: objects) {
-            flag |= object->intersect(r, tmpHit, tmin);
-            if(tmpHit.getT() < h.getT()) h = tmpHit;
+            flag |= object->intersect(r, h, tmin);
         }
         return flag;
     }

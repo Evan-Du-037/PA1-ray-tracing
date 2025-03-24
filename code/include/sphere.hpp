@@ -49,7 +49,7 @@ public:
     
         Vector3f point = r.pointAtParameter(t);
         Vector3f normal = (point - center).normalized();
-        h.set(t, material, normal);
+        h.safe_set(t, material, normal);
         return true;
     }
 

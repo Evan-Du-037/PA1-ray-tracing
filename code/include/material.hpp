@@ -25,17 +25,18 @@ public:
 
     Vector3f Shade(const Ray &ray, const Hit &hit,
                 const Vector3f &dirToLight, const Vector3f &lightColor) {
-        Vector3f N = hit.getNormal().normalized();
+        Vector3f N = hit.getNormal();
         Vector3f L = dirToLight.normalized();
-        Vector3f V = -ray.getDirection().normalized();
-        Vector3f H = (L + V).normalized();
+        Vector3f V = -ray.getDirection();
+        // Vector3f H = (L + V).normalized();
+        Vector3f R = N * 2 * Vector3f::dot(N, L) - L;  
 
         // diffuse shade
         float diffuseFactor = std::max(0.0f, Vector3f::dot(N, L));
         Vector3f diffuseShade = diffuseColor * lightColor * diffuseFactor;
 
         // specular shade
-        float specFactor = std::max(0.0f, Vector3f::dot(N, H));
+        float specFactor = std::max(0.0f, Vector3f::dot(R, V));
         Vector3f specularShade = specularColor * lightColor * pow(specFactor, shininess);
 
         // ambient color neglected

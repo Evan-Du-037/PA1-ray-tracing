@@ -36,7 +36,7 @@ public:
         if(abs(denominator) < eps) return false;  // parallel
         float t = numerator / denominator;
         if(t >= tmin) {
-            h.set(t, material, planeNormal);
+            h.safe_set(t, material, planeNormal);
             return true;
         }
         return false;

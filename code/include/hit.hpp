@@ -18,13 +18,13 @@ public:
     Hit(float _t, Material *m, const Vector3f &n) {
         t = _t;
         material = m;
-        normal = n;
+        normal = n.normalized();
     }
 
     Hit(const Hit &h) {
         t = h.t;
         material = h.material;
-        normal = h.normal;
+        normal = h.normal.normalized();
     }
 
     // destructor
@@ -38,11 +38,19 @@ public:
         return material;
     }
 
+    // get normalized Normal vector
     const Vector3f &getNormal() const {
         return normal;
     }
 
     void set(float _t, Material *m, const Vector3f &n) {
+        t = _t;
+        material = m;
+        normal = n;
+    }
+
+    void safe_set(float _t, Material *m, const Vector3f &n) {
+        if(_t >= t) return;
         t = _t;
         material = m;
         normal = n;

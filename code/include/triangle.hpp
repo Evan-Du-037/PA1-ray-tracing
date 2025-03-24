@@ -36,7 +36,7 @@ public:
 		if(Vector3f::dot(planeNormal, ray.getOrigin()-vertices[0]) < 0) {
 			planeNormal = -planeNormal;
 		}
-		hit.set(t, material, planeNormal);
+		hit.safe_set(t, material, planeNormal);
 		return true;
 	}
 
