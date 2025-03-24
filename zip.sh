@@ -1,1 +1,0 @@
-find code/src code/include -name "*.cpp" -o -name "*.hpp" | zip -j submit.zip -@
