@@ -46,12 +46,20 @@ public:
         float normalized_x = point.x() / width - 0.5f;
         float normalized_y = point.y() / height - 0.5f;
 
-        float x_angle = angle / height * width * normalized_x;
+        float x_angle = (angle * width / height) * normalized_x;
         float y_angle = angle * normalized_y;
 
-        Vector3f ray_dir = (direction + tan(x_angle) * horizontal + tan(y_angle) * up).normalized();
-        return Ray(center, ray_dir);
+        Vector3f rayDir = (direction + tan(x_angle) * horizontal + tan(y_angle) * up).normalized();
+
+        return Ray(center, rayDir);
     }
+
+    // reference from github
+    // Ray generateRay(const Vector2f &point) override {
+    //     float f=height/(2*tan(angle/2));
+    //     Vector3f dir=Matrix3f(up,horizontal,direction)*Vector3f(point[1]-height/2,point[0]-width/2,f);
+    //     return Ray(center,dir.normalized());
+    // }
 
 private:
     float angle;
