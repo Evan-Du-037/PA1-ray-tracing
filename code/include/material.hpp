@@ -12,7 +12,7 @@
 class Material {
 public:
 
-    explicit Material(const Vector3f &d_color, const Vector3f &s_color = Vector3f::ZERO, float s = 0) :
+    explicit Material(const Vector3f &d_color, const Vector3f &s_color = Vector3f::ZERO, float s = 0):
             diffuseColor(d_color), specularColor(s_color), shininess(s) {
 
     }
@@ -37,6 +37,7 @@ public:
 
         // specular shade
         float specFactor = std::max(0.0f, Vector3f::dot(R, V));
+        // float specFactor = std::max(0.0f, Vector3f::dot(H, N));
         Vector3f specularShade = specularColor * lightColor * pow(specFactor, shininess);
 
         // ambient color neglected

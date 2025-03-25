@@ -36,8 +36,7 @@ public:
         if(abs(denominator) < eps) return false;  // parallel
         float t = numerator / denominator;
         if(t >= tmin) {
-            h.safe_set(t, material, planeNormal);
-            return true;
+            return h.safe_set(t, material, planeNormal);
         }
         return false;
     }
@@ -45,7 +44,7 @@ public:
 protected:
     Vector3f normal;
     float d;
-    constexpr static float eps = 1e-10;
+    
 };
 
 #endif //PLANE_H

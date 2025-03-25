@@ -46,14 +46,15 @@ public:
     void set(float _t, Material *m, const Vector3f &n) {
         t = _t;
         material = m;
-        normal = n;
+        normal = n.normalized();
     }
 
-    void safe_set(float _t, Material *m, const Vector3f &n) {
-        if(_t >= t) return;
+    bool safe_set(float _t, Material *m, const Vector3f &n) {
+        if(_t > t) return false;
         t = _t;
         material = m;
-        normal = n;
+        normal = n.normalized();
+        return true;
     }
 
 private:

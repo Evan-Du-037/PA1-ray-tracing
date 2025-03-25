@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-// TODO: implement this class and add more fields as necessary,
+// implement this class and add more fields as necessary,
 class Triangle: public Object3D {
 public:
 	Triangle() = delete;
@@ -17,14 +17,12 @@ public:
 		vertices[0] = a;
 		vertices[1] = b;
 		vertices[2] = c;
-		normal = Vector3f::cross(a-b, b-c);
-		normal = normal / normal.length();
+		normal = Vector3f::cross(a-b, b-c).normalized();
 	}
 
 	bool intersect(const Ray& ray,  Hit& hit , float tmin) override {
-		assert(tmin > 0);
 		Matrix3f matrix = Matrix3f(vertices[0]-vertices[1], vertices[0]-vertices[2], ray.getDirection());
-		if (fabs(matrix.determinant()) < 1e-6) return false;  // matrix irriversible
+		if (fabs(matrix.determinant()) < eps) return false;  // matrix irriversible
 		Vector3f result = matrix.inverse() * (vertices[0] - ray.getOrigin());
 		float x = result[0];
 		float y = result[1];
@@ -36,14 +34,12 @@ public:
 		if(Vector3f::dot(planeNormal, ray.getOrigin()-vertices[0]) < 0) {
 			planeNormal = -planeNormal;
 		}
-		hit.safe_set(t, material, planeNormal);
-		return true;
+		return hit.safe_set(t, material, planeNormal);
 	}
 
 	Vector3f normal;
 	Vector3f vertices[3];
-protected:
-	constexpr static float eps = 1e-10;
+
 };
 
 #endif //TRIANGLE_H

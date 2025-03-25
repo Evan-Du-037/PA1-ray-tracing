@@ -15,15 +15,10 @@ class Group : public Object3D {
 
 public:
 
-    Group() {
-        numObjects = 0;
-    }
+    Group() = delete;
 
     explicit Group (int num_objects) {
-        numObjects = num_objects;
-        for(int i = 0; i < num_objects; ++i) {
-            objects.push_back(nullptr);
-        }
+        objects.resize(num_objects);
     }
 
     ~Group() override {
@@ -43,17 +38,15 @@ public:
     }
 
     void addObject(int index, Object3D *obj) {
-        // objects.insert(objects.begin() + index, obj);
         objects[index] = obj;
     }
 
     int getGroupSize() {
-        return numObjects;
+        return objects.size();
     }
 
 private:
     vector<Object3D*> objects;
-    int numObjects;
 };
 
 #endif

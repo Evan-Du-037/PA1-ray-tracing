@@ -21,6 +21,7 @@ public:
 protected:
 
     Material *material;
+    constexpr static float eps = 1e-30;
 };
 
 #endif

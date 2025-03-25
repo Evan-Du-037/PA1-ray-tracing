@@ -22,35 +22,16 @@ public:
     ~Sphere() override = default;
 
     bool intersect(const Ray &r, Hit &h, float tmin) override {
-        Vector3f oc = r.getOrigin() - center;
-        Vector3f dir = r.getDirection();
-    
-        float a = Vector3f::dot(dir, dir);  // = 1 if dir is normalized
-        float b = 2.0f * Vector3f::dot(dir, oc);
-        float c = Vector3f::dot(oc, oc) - radius * radius;
-    
-        float discriminant = b * b - 4 * a * c;
-    
-        if (discriminant < 0) return false;
-    
-        float sqrtD = sqrt(discriminant);
-        float t1 = (-b - sqrtD) / (2.0f * a);
-        float t2 = (-b + sqrtD) / (2.0f * a);
-    
-        // 选择满足条件的最小 t
-        float t;
-        if (t1 >= tmin) {
-            t = t1;
-        } else if (t2 >= tmin) {
-            t = t2;
-        } else {
-            return false;  // 两个交点都在 tmin 左边
-        }
-    
-        Vector3f point = r.pointAtParameter(t);
-        Vector3f normal = (point - center).normalized();
-        h.safe_set(t, material, normal);
-        return true;
+        Vector3f PO = center - r.getOrigin();
+        float PO_len = PO.length();
+        float cast = Vector3f::dot(PO, r.getDirection());
+        if(cast < tmin) return false;
+        float dist = sqrt(PO_len * PO_len - cast * cast);
+        if(dist > radius) return false;
+        float t = cast - sqrt(radius * radius - dist * dist);
+        if(t < tmin) return false;
+        Vector3f intersectPoint = r.getOrigin() + r.getDirection() * t;
+        return h.safe_set(t, material, intersectPoint - center);
     }
 
 protected:
