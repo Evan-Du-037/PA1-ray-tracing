@@ -43,23 +43,10 @@ public:
         : Camera(center, direction, up, imgW, imgH), angle(angle) {}
 
     Ray generateRay(const Vector2f &point) override {
-        float normalized_x = point.x() / width - 0.5f;
-        float normalized_y = point.y() / height - 0.5f;
-
-        float x_angle = (angle * width / height) * normalized_x;
-        float y_angle = angle * normalized_y;
-
-        Vector3f rayDir = (direction + tan(x_angle) * horizontal + tan(y_angle) * up).normalized();
-
-        return Ray(center, rayDir);
+        float distance = height / 2 / tan(angle / 2);
+        Vector3f rayDirection = distance * direction + (point.x() - width / 2) * horizontal + (point.y() - height / 2) * up;
+        return Ray(center, rayDirection);
     }
-
-    // reference from github
-    // Ray generateRay(const Vector2f &point) override {
-    //     float f=height/(2*tan(angle/2));
-    //     Vector3f dir=Matrix3f(up,horizontal,direction)*Vector3f(point[1]-height/2,point[0]-width/2,f);
-    //     return Ray(center,dir.normalized());
-    // }
 
 private:
     float angle;
