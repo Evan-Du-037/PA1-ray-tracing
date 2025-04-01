@@ -23,6 +23,7 @@ public:
     }
 
     ~Transform() {
+        // delete o;
     }
 
     virtual bool intersect(const Ray &r, Hit &h, float tmin) {
