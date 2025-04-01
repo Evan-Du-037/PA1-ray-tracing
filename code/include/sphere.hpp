@@ -22,17 +22,36 @@ public:
     ~Sphere() override = default;
 
     bool intersect(const Ray &r, Hit &h, float tmin) override {
-        Vector3f PO = center - r.getOrigin();
-        float PO_len = PO.length();
-        float cast = Vector3f::dot(PO, r.getDirection());
-        if(cast < tmin) return false;
-        float dist = sqrt(PO_len * PO_len - cast * cast);
-        if(dist > radius) return false;
-        float t = cast - sqrt(radius * radius - dist * dist);
-        if(t < tmin) return false;
-        Vector3f intersectPoint = r.getOrigin() + r.getDirection() * t;
-        return h.safe_set(t, material, intersectPoint - center);
+        Vector3f dir = r.getDirection().normalized();
+        Vector3f l = center - r.getOrigin();
+        
+        float tp = Vector3f::dot(l, dir);
+        float l2 = l.squaredLength();
+        float r2 = radius * radius;
+        float d2 = l2 - tp * tp;
+    
+        if (l2 < r2) {
+            float t = tp + sqrt(r2 - d2);
+            if (t > tmin && t < h.getT()) {
+                Vector3f n = (l - dir * t).normalized();
+                h.set(t, material, n);
+                return true;
+            }
+            return false;
+        } 
+        else if (l2 > r2) {
+            if (tp < 0 || d2 > r2) return false; 
+    
+            float t = tp - sqrt(r2 - d2);
+            if (t > tmin && t < h.getT()) {
+                Vector3f n = (dir * t - l).normalized();
+                h.set(t, material, n);
+                return true;
+            }
+        }
+        return false;
     }
+
 
 protected:
     Vector3f center;

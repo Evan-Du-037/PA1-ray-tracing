@@ -34,21 +34,15 @@ public:
 		float y = M2.determinant() / detM;
 		float t = M3.determinant() / detM;
 
-		// original approach
-		// if (fabs(matrix.determinant()) < eps) return false;  // matrix irriversible
-		// Vector3f result = matrix.inverse() * (vertices[0] - ray.getOrigin());
-		// float x = result[0];
-		// float y = result[1];
-		// float t = result[2];
-
-		if(t < tmin || x > 1 || y > 1 || x < 0 || y < 0 || x+y > 1) {
+		if(t < tmin || t >= hit.getT() || x > 1 || y > 1 || x < 0 || y < 0 || x+y > 1) {
 			return false;
 		}
 		Vector3f planeNormal = normal;
 		if(Vector3f::dot(planeNormal, ray.getOrigin()-vertices[0]) < 0) {
 			planeNormal = -planeNormal;
 		}
-		return hit.safe_set(t, material, planeNormal);
+		hit.set(t, material, planeNormal);
+		return true;
 	}
 
 	Vector3f normal;
