@@ -24,23 +24,32 @@ public:
     bool intersect(const Ray &r, Hit &h, float tmin) override {
         Vector3f dir = r.getDirection().normalized();
         Vector3f l = center - r.getOrigin();
-        float tp = Vector3f::dot(l, dir);      
-        float l2 = l.squaredLength();          
-        float r2 = radius * radius;          
-        float d2 = l2 - tp * tp;        
-        if (d2 > r2) return false; 
-        float sqrt_discriminant = sqrt(r2 - d2); 
-        float t;
-        if (l2 < r2) { 
-            t = tp + sqrt_discriminant;
-        } else {
-            if (tp < 0) return false;  
-            t = tp - sqrt_discriminant;
+        
+        float tp = Vector3f::dot(l, dir);
+        float l2 = l.squaredLength();
+        float r2 = radius * radius;
+        float d2 = l2 - tp * tp;
+    
+        if (l2 < r2) {
+            float t = tp + sqrt(r2 - d2);
+            if (t > tmin && t < h.getT()) {
+                Vector3f n = (l - dir * t).normalized();
+                h.set(t, material, n);
+                return true;
+            }
+            return false;
+        } 
+        else if (l2 > r2) {
+            if (tp < 0 || d2 > r2) return false; 
+    
+            float t = tp - sqrt(r2 - d2);
+            if (t > tmin && t < h.getT()) {
+                Vector3f n = (dir * t - l).normalized();
+                h.set(t, material, n);
+                return true;
+            }
         }
-        if (t <= tmin || t >= h.getT()) return false;
-        Vector3f n = (r.pointAtParameter(t) - center).normalized();
-        h.set(t, material, n);
-        return true;
+        return false;
     }
 
 
