@@ -55,8 +55,6 @@ build CMakeFiles/PA1.dir/src/image.cpp.o: CXX_COMPILER__PA1_unscanned_Debug /Use
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/include -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = CMakeFiles/PA1.dir
   OBJECT_FILE_DIR = CMakeFiles/PA1.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/PA1.dir/
-  TARGET_PDB = PA1.pdb
 
 build CMakeFiles/PA1.dir/src/main.cpp.o: CXX_COMPILER__PA1_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/src/main.cpp || cmake_object_order_depends_target_PA1
   DEP_FILE = CMakeFiles/PA1.dir/src/main.cpp.o.d
@@ -64,8 +62,6 @@ build CMakeFiles/PA1.dir/src/main.cpp.o: CXX_COMPILER__PA1_unscanned_Debug /User
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/include -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = CMakeFiles/PA1.dir
   OBJECT_FILE_DIR = CMakeFiles/PA1.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/PA1.dir/
-  TARGET_PDB = PA1.pdb
 
 build CMakeFiles/PA1.dir/src/mesh.cpp.o: CXX_COMPILER__PA1_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/src/mesh.cpp || cmake_object_order_depends_target_PA1
   DEP_FILE = CMakeFiles/PA1.dir/src/mesh.cpp.o.d
@@ -73,8 +69,6 @@ build CMakeFiles/PA1.dir/src/mesh.cpp.o: CXX_COMPILER__PA1_unscanned_Debug /User
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/include -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = CMakeFiles/PA1.dir
   OBJECT_FILE_DIR = CMakeFiles/PA1.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/PA1.dir/
-  TARGET_PDB = PA1.pdb
 
 build CMakeFiles/PA1.dir/src/scene_parser.cpp.o: CXX_COMPILER__PA1_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/src/scene_parser.cpp || cmake_object_order_depends_target_PA1
   DEP_FILE = CMakeFiles/PA1.dir/src/scene_parser.cpp.o.d
@@ -82,8 +76,6 @@ build CMakeFiles/PA1.dir/src/scene_parser.cpp.o: CXX_COMPILER__PA1_unscanned_Deb
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/include -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = CMakeFiles/PA1.dir
   OBJECT_FILE_DIR = CMakeFiles/PA1.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/PA1.dir/
-  TARGET_PDB = PA1.pdb
 
 
 # =============================================================================
@@ -99,9 +91,8 @@ build PA1: CXX_EXECUTABLE_LINKER__PA1_Debug CMakeFiles/PA1.dir/src/image.cpp.o C
   OBJECT_DIR = CMakeFiles/PA1.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/PA1.dir/
   TARGET_FILE = PA1
-  TARGET_PDB = PA1.pdb
+  TARGET_PDB = PA1.dbg
 
 
 #############################################
@@ -147,8 +138,6 @@ build deps/vecmath/CMakeFiles/vecmath.dir/src/Matrix2f.cpp.o: CXX_COMPILER__vecm
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = deps/vecmath/CMakeFiles/vecmath.dir
   OBJECT_FILE_DIR = deps/vecmath/CMakeFiles/vecmath.dir/src
-  TARGET_COMPILE_PDB = deps/vecmath/CMakeFiles/vecmath.dir/vecmath.pdb
-  TARGET_PDB = deps/vecmath/libvecmath.pdb
 
 build deps/vecmath/CMakeFiles/vecmath.dir/src/Matrix3f.cpp.o: CXX_COMPILER__vecmath_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/src/Matrix3f.cpp || cmake_object_order_depends_target_vecmath
   DEP_FILE = deps/vecmath/CMakeFiles/vecmath.dir/src/Matrix3f.cpp.o.d
@@ -156,8 +145,6 @@ build deps/vecmath/CMakeFiles/vecmath.dir/src/Matrix3f.cpp.o: CXX_COMPILER__vecm
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = deps/vecmath/CMakeFiles/vecmath.dir
   OBJECT_FILE_DIR = deps/vecmath/CMakeFiles/vecmath.dir/src
-  TARGET_COMPILE_PDB = deps/vecmath/CMakeFiles/vecmath.dir/vecmath.pdb
-  TARGET_PDB = deps/vecmath/libvecmath.pdb
 
 build deps/vecmath/CMakeFiles/vecmath.dir/src/Matrix4f.cpp.o: CXX_COMPILER__vecmath_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/src/Matrix4f.cpp || cmake_object_order_depends_target_vecmath
   DEP_FILE = deps/vecmath/CMakeFiles/vecmath.dir/src/Matrix4f.cpp.o.d
@@ -165,8 +152,6 @@ build deps/vecmath/CMakeFiles/vecmath.dir/src/Matrix4f.cpp.o: CXX_COMPILER__vecm
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = deps/vecmath/CMakeFiles/vecmath.dir
   OBJECT_FILE_DIR = deps/vecmath/CMakeFiles/vecmath.dir/src
-  TARGET_COMPILE_PDB = deps/vecmath/CMakeFiles/vecmath.dir/vecmath.pdb
-  TARGET_PDB = deps/vecmath/libvecmath.pdb
 
 build deps/vecmath/CMakeFiles/vecmath.dir/src/Quat4f.cpp.o: CXX_COMPILER__vecmath_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/src/Quat4f.cpp || cmake_object_order_depends_target_vecmath
   DEP_FILE = deps/vecmath/CMakeFiles/vecmath.dir/src/Quat4f.cpp.o.d
@@ -174,8 +159,6 @@ build deps/vecmath/CMakeFiles/vecmath.dir/src/Quat4f.cpp.o: CXX_COMPILER__vecmat
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = deps/vecmath/CMakeFiles/vecmath.dir
   OBJECT_FILE_DIR = deps/vecmath/CMakeFiles/vecmath.dir/src
-  TARGET_COMPILE_PDB = deps/vecmath/CMakeFiles/vecmath.dir/vecmath.pdb
-  TARGET_PDB = deps/vecmath/libvecmath.pdb
 
 build deps/vecmath/CMakeFiles/vecmath.dir/src/Vector2f.cpp.o: CXX_COMPILER__vecmath_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/src/Vector2f.cpp || cmake_object_order_depends_target_vecmath
   DEP_FILE = deps/vecmath/CMakeFiles/vecmath.dir/src/Vector2f.cpp.o.d
@@ -183,8 +166,6 @@ build deps/vecmath/CMakeFiles/vecmath.dir/src/Vector2f.cpp.o: CXX_COMPILER__vecm
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = deps/vecmath/CMakeFiles/vecmath.dir
   OBJECT_FILE_DIR = deps/vecmath/CMakeFiles/vecmath.dir/src
-  TARGET_COMPILE_PDB = deps/vecmath/CMakeFiles/vecmath.dir/vecmath.pdb
-  TARGET_PDB = deps/vecmath/libvecmath.pdb
 
 build deps/vecmath/CMakeFiles/vecmath.dir/src/Vector3f.cpp.o: CXX_COMPILER__vecmath_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/src/Vector3f.cpp || cmake_object_order_depends_target_vecmath
   DEP_FILE = deps/vecmath/CMakeFiles/vecmath.dir/src/Vector3f.cpp.o.d
@@ -192,8 +173,6 @@ build deps/vecmath/CMakeFiles/vecmath.dir/src/Vector3f.cpp.o: CXX_COMPILER__vecm
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = deps/vecmath/CMakeFiles/vecmath.dir
   OBJECT_FILE_DIR = deps/vecmath/CMakeFiles/vecmath.dir/src
-  TARGET_COMPILE_PDB = deps/vecmath/CMakeFiles/vecmath.dir/vecmath.pdb
-  TARGET_PDB = deps/vecmath/libvecmath.pdb
 
 build deps/vecmath/CMakeFiles/vecmath.dir/src/Vector4f.cpp.o: CXX_COMPILER__vecmath_unscanned_Debug /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/src/Vector4f.cpp || cmake_object_order_depends_target_vecmath
   DEP_FILE = deps/vecmath/CMakeFiles/vecmath.dir/src/Vector4f.cpp.o.d
@@ -201,8 +180,6 @@ build deps/vecmath/CMakeFiles/vecmath.dir/src/Vector4f.cpp.o: CXX_COMPILER__vecm
   INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
   OBJECT_DIR = deps/vecmath/CMakeFiles/vecmath.dir
   OBJECT_FILE_DIR = deps/vecmath/CMakeFiles/vecmath.dir/src
-  TARGET_COMPILE_PDB = deps/vecmath/CMakeFiles/vecmath.dir/vecmath.pdb
-  TARGET_PDB = deps/vecmath/libvecmath.pdb
 
 
 # =============================================================================
@@ -218,9 +195,8 @@ build deps/vecmath/libvecmath.a: CXX_STATIC_LIBRARY_LINKER__vecmath_Debug deps/v
   OBJECT_DIR = deps/vecmath/CMakeFiles/vecmath.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = deps/vecmath/CMakeFiles/vecmath.dir/vecmath.pdb
   TARGET_FILE = deps/vecmath/libvecmath.a
-  TARGET_PDB = deps/vecmath/libvecmath.pdb
+  TARGET_PDB = vecmath.a.dbg
 
 
 #############################################
@@ -282,14 +258,14 @@ build deps/vecmath/all: phony deps/vecmath/libvecmath.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/evandu/School/计算机图形学/PA1/code/CMakeLists.txt /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Users/evandu/School/计算机图形学/PA1/code/CMakeLists.txt /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/evandu/School/计算机图形学/PA1/code/CMakeLists.txt /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCXXCompiler.cmake.in /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeCompilerIdDetection.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake /opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeNinjaFindMake.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /opt/homebrew/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /opt/homebrew/share/cmake/Modules/CMakeSystem.cmake.in /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake /opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake /opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/homebrew/share/cmake/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake /opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Determine-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
+build /Users/evandu/School/计算机图形学/PA1/code/CMakeLists.txt /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/CMakeLists.txt /opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Linker/AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake /opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake /opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
 
 
 #############################################

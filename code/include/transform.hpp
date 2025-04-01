@@ -23,6 +23,7 @@ public:
     }
 
     ~Transform() {
+        // delete o;
     }
 
     virtual bool intersect(const Ray &r, Hit &h, float tmin) {
@@ -31,7 +32,7 @@ public:
         Ray tr(trSource, trDirection);
         bool inter = o->intersect(tr, h, tmin);
         if (inter) {
-            h.safe_set(h.getT(), h.getMaterial(), transformDirection(transform.transposed(), h.getNormal()).normalized());
+            h.set(h.getT(), h.getMaterial(), transformDirection(transform.transposed(), h.getNormal()).normalized());
         }
         return inter;
     }

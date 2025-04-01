@@ -28,7 +28,6 @@ public:
         Vector3f N = hit.getNormal();
         Vector3f L = dirToLight.normalized();
         Vector3f V = -ray.getDirection();
-        // Vector3f H = (L + V).normalized();
         Vector3f R = N * 2 * Vector3f::dot(N, L) - L;  
 
         // diffuse shade
