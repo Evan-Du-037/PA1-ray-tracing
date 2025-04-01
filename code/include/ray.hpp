@@ -25,7 +25,7 @@ public:
         return origin;
     }
 
-    // get normalized direction
+    // don't get normalized direction
     const Vector3f &getDirection() const {
         return direction;
     }

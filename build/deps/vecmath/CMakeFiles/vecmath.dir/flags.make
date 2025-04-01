@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/evandu/School/计算机图形学/PA1/code/deps/vecmath/include
+CXX_INCLUDES = -I/Users/evan/Study/大二下/计算机图形学/PA1/code/deps/vecmath/include
 
 CXX_FLAGSarm64 = -g -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk
 

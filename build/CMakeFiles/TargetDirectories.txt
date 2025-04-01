@@ -1,6 +1,6 @@
-/Users/evandu/School/计算机图形学/PA1/build/CMakeFiles/PA1.dir
-/Users/evandu/School/计算机图形学/PA1/build/CMakeFiles/edit_cache.dir
-/Users/evandu/School/计算机图形学/PA1/build/CMakeFiles/rebuild_cache.dir
-/Users/evandu/School/计算机图形学/PA1/build/deps/vecmath/CMakeFiles/vecmath.dir
-/Users/evandu/School/计算机图形学/PA1/build/deps/vecmath/CMakeFiles/edit_cache.dir
-/Users/evandu/School/计算机图形学/PA1/build/deps/vecmath/CMakeFiles/rebuild_cache.dir
+/Users/evan/Study/大二下/计算机图形学/PA1/build/CMakeFiles/PA1.dir
+/Users/evan/Study/大二下/计算机图形学/PA1/build/CMakeFiles/edit_cache.dir
+/Users/evan/Study/大二下/计算机图形学/PA1/build/CMakeFiles/rebuild_cache.dir
+/Users/evan/Study/大二下/计算机图形学/PA1/build/deps/vecmath/CMakeFiles/vecmath.dir
+/Users/evan/Study/大二下/计算机图形学/PA1/build/deps/vecmath/CMakeFiles/edit_cache.dir
+/Users/evan/Study/大二下/计算机图形学/PA1/build/deps/vecmath/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/evandu/School/计算机图形学/PA1/code/deps/vecmath
+# Install script for directory: /Users/evan/Study/大二下/计算机图形学/PA1/code/deps/vecmath
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/evandu/School/计算机图形学/PA1/build/deps/vecmath/install_local_manifest.txt"
+  file(WRITE "/Users/evan/Study/大二下/计算机图形学/PA1/build/deps/vecmath/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

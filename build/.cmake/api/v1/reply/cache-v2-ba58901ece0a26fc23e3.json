@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/evandu/School/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/build"
+			"value" : "/Users/evan/Study/\u5927\u4e8c\u4e0b/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -92,6 +92,22 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "6"
+		},
+		{
+			"name" : "CMAKE_COLOR_MAKEFILE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enable/Disable color output during build."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "ON"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -139,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "CXX compiler"
 				}
 			],
-			"type" : "FILEPATH",
+			"type" : "STRING",
 			"value" : "/usr/bin/clang++"
 		},
 		{
@@ -358,22 +374,6 @@
 			"value" : ""
 		},
 		{
-			"name" : "CMAKE_EXPORT_BUILD_DATABASE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enable/Disable output of build database during the build."
-				}
-			],
-			"type" : "BOOL",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_EXPORT_COMPILE_COMMANDS",
 			"properties" : 
 			[
@@ -407,7 +407,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/evandu/School/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/evan/Study/\u5927\u4e8c\u4e0b/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -419,7 +419,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Ninja"
+			"value" : "Unix Makefiles"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -467,7 +467,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/evandu/School/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/code"
+			"value" : "/Users/evan/Study/\u5927\u4e8c\u4e0b/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/code"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -523,11 +523,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Program used to build from build.ninja files."
+					"value" : "Path to a program."
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/opt/homebrew/bin/ninja"
+			"value" : "/usr/bin/make"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1059,7 +1059,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/evandu/School/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/build"
+			"value" : "/Users/evan/Study/\u5927\u4e8c\u4e0b/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/build"
 		},
 		{
 			"name" : "PA1_IS_TOP_LEVEL",
@@ -1083,7 +1083,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/evandu/School/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/code"
+			"value" : "/Users/evan/Study/\u5927\u4e8c\u4e0b/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/code"
 		},
 		{
 			"name" : "vecmath_BINARY_DIR",
@@ -1095,7 +1095,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/evandu/School/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/build/deps/vecmath"
+			"value" : "/Users/evan/Study/\u5927\u4e8c\u4e0b/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/build/deps/vecmath"
 		},
 		{
 			"name" : "vecmath_IS_TOP_LEVEL",
@@ -1119,7 +1119,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/evandu/School/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/code/deps/vecmath"
+			"value" : "/Users/evan/Study/\u5927\u4e8c\u4e0b/\u8ba1\u7b97\u673a\u56fe\u5f62\u5b66/PA1/code/deps/vecmath"
 		}
 	],
 	"kind" : "cache",
