@@ -49,14 +49,6 @@ public:
         normal = n.normalized();
     }
 
-    bool safe_set(float _t, Material *m, const Vector3f &n) {
-        if(_t > t) return false;
-        t = _t;
-        material = m;
-        normal = n.normalized();
-        return true;
-    }
-
 private:
     float t;
     Material *material;

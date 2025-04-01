@@ -35,8 +35,9 @@ public:
         float denominator = Vector3f::dot(planeNormal, r.getDirection());
         if(abs(denominator) < eps) return false;  // parallel
         float t = numerator / denominator;
-        if(t >= tmin) {
-            return h.safe_set(t, material, planeNormal);
+        if(t >= tmin && t < h.getT()) {
+            h.set(t, material, planeNormal);
+            return true;
         }
         return false;
     }

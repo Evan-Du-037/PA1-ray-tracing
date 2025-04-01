@@ -45,7 +45,7 @@ public:
     Ray generateRay(const Vector2f &point) override {
         float distance = height / 2 / tan(angle / 2);
         Vector3f rayDirection = distance * direction + (point.x() - width / 2) * horizontal + (point.y() - height / 2) * up;
-        return Ray(center, rayDirection);
+        return Ray(center, rayDirection.normalized());
     }
 
 private:
